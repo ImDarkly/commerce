@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Auctions</title>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="{% static 'auctions/styles.css' %}" rel="stylesheet">
+        <link rel="stylesheet" href="styles/style.css">
+    </head>
+    <body>
+        <nav id="nav">
+            <div class="navbar">
+                <h1>Auctions</h1>
+                <div class="nav-burger" id="nav-burger">
+                    <button onclick="OpenList()">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+                <ul class="nav">
+                    <hr>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'index' %}">Active Listings</a>
+                    </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'index' %}">Categories</a>
+                        </li>
+        
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'index' %}">Watchlist</a>
+                        </li>
+        
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'create' %}">Create Listing</a>
+                        </li>
+        
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'logout' %}">Log Out</a>
+                        </li>
+                    <hr>
+                </ul>
+                <div class="nav-message">
+                        Signed in as <strong>Hermione</strong>.
+                </div>
+            </div>
+        </nav>
+    </body>
+    <script src="scripts/script.js"></script>
+</html>
