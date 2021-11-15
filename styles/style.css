@@ -174,8 +174,8 @@ hr{
     color: var(--white);
     font-size: 20px;
     text-decoration: none;
-    padding: 4px 12px;
-    margin: 0 76px 16px 76px;
+    padding: 8px 12px;
+    margin: 0 64px 16px 64px;
     margin-top: auto;
     border-radius: 25px;   
 }
