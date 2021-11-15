@@ -2,7 +2,9 @@
     --white: #ffffff;
     --white-95: #f2f2f2;
     --white-90: #e2e2e2;
+    --white-50: #808080;
     --blue: #0A7FFF;
+    --light-blue: #479FFF;
 }
 body{
     padding: 0;
@@ -20,13 +22,15 @@ body{
 }
 nav{
     position: fixed;
-    width: calc(100% - 64px);
-    margin: 32px;
+    width: calc(100% - 32px);
+    top: 0px;
+    margin: 18px 16px;
     height: 56px;
     background-color: #f2f2f2;
     border-radius: 12px;
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-    transition: all 0.5s;
+    transition: all 0.5s ease-in-out;
+    z-index: 2;
 }
 .nav-active{
     height: 416px;
@@ -41,6 +45,7 @@ nav{
     float: left;
     margin: 13px 24px;
     padding: 0;
+    font-weight: normal;
 }
 .nav-burger{
     position: relative;
@@ -110,7 +115,7 @@ nav{
     font-size: 24px;
     padding: 8px 24px;
     margin: 8px 0;
-    border-radius: 25px;
+    border-radius: 12 px;
 }
 .navbar .nav-item:hover{
     background-color: var(--white-90);
@@ -120,6 +125,63 @@ nav{
     font-size: 16px;
     margin: 8px auto;
     max-width: 280px;
+}
+hr{
+    margin: 0 16px;
+    background-color: black;
+}
+.card{
+    position: relative;
+    background-color: var(--white-90);
+    width: 312px;
+    height: 504px;
+    margin: 32px auto;
+    border-radius: 12px;
+}
+.card-img{
+    width: 248px;
+    height: 248px;
+    margin: 16px 32px;
+    border-radius: 12px;
+
+}
+.title{
+    margin: 96px 32px 8px 32px;
+    font-weight: normal;
+}
+.card-body{
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    height: 40%;
+}
+.card-body p{
+    margin: 4px 0 0 0;
+}
+.card-title{
+    font-weight: bold;
+    font-size: 24px;
+}
+.card-price{
+    font-weight: bold;
+    font-size: 20px;
+}
+.card-date{
+    color: var(--white-50);
+}
+.card-button{
+    background-color: var(--blue);
+    color: var(--white);
+    font-size: 20px;
+    text-decoration: none;
+    padding: 4px 12px;
+    margin: 0 76px 16px 76px;
+    margin-top: auto;
+    border-radius: 25px;   
+}
+.card-button:hover{
+    background-color: var(--light-blue);
+    -webkit-tap-highlight-color: transparent;
 }
 @media screen and (min-width: 1000px) {
     .nav-burger{

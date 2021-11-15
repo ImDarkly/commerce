@@ -46,6 +46,20 @@
                 </div>
             </div>
         </nav>
+        <h2 class="title">Active Listings</h2>
+        <hr>
+        <div class="grid">
+            <div class="card">
+                <img class="card-img" src="https://picsum.photos/200/300" alt=""> 
+                <div class="card-body">
+                    <p class="card-title">Broomstick</p>
+                    <p class="card-text card-price">Price: $70</p>
+                    <p class="card-text description">Nimbus 2000</p>
+                    <p class="card-text card-date">01.01.1970</p>
+                    <a href="{% url 'auction' auction.id %}" class="card-button">Place Bid</a>
+                </div>
+            </div>
+        </div>
     </body>
     <script src="scripts/script.js"></script>
 </html>
