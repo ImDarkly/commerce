@@ -115,7 +115,7 @@ nav{
     font-size: 24px;
     padding: 8px 24px;
     margin: 8px 0;
-    border-radius: 12px;
+    border-radius: 12 px;
 }
 .navbar .nav-item:hover{
     background-color: var(--white-90);
@@ -141,7 +141,7 @@ hr{
 .card-img{
     width: 216px;
     height: 216px;
-    margin: 16px 32px;
+    margin: 32px;
     border-radius: 12px;
 
 }
