@@ -115,7 +115,7 @@ nav{
     font-size: 24px;
     padding: 8px 24px;
     margin: 8px 0;
-    border-radius: 12 px;
+    border-radius: 16px;
 }
 .navbar .nav-item:hover{
     background-color: var(--white-90);
