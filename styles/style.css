@@ -113,7 +113,7 @@ nav{
 }
 .navbar .nav-item {
     font-size: 24px;
-    padding: 16px 24px;
+    padding: 8px 24px;
     margin: 8px 0;
     border-radius: 12px;
 }
@@ -209,7 +209,7 @@ hr{
     }
     .navbar .nav-item {
         font-size: 16px;
-        padding: 8px 6px;
+        padding: 8px 24px;
         display: inline;
         margin: 24px 2px;
     }
