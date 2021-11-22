@@ -22,6 +22,9 @@ body{
 }
 nav{
     position: fixed;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
     width: calc(100% - 32px);
     top: 0px;
     margin: 18px 16px;
