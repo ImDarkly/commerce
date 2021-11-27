@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Auctions</title>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="styles/styles.css" rel="stylesheet">
+    </head>
+    <body>
+        <nav id="nav">
+            <div class="navbar">
+                <h1>Auctions</h1>
+                <div class="nav-burger" id="nav-burger">
+                    <button onclick="OpenList()">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+                <ul class="nav">
+                    <hr>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Active Listings</a>
+                    </li>
+                    
+                        <li class="nav-item">
+                            <a class="nav-link" href="/">Categories</a>
+                        </li>
+        
+                        <li class="nav-item">
+                            <a class="nav-link" href="/">Watchlist</a>
+                        </li>
+        
+                        <li class="nav-item">
+                            <a class="nav-link" href="create.html">Create Listing</a>
+                        </li>
+        
+                        <li class="nav-item">
+                            <a class="nav-link" href="/">Log Out</a>
+                        </li>
+                    
+                    <hr>
+                </ul>
+                <div class="nav-message">
+                    
+                        Signed in as <strong>admin</strong>.
+                    
+                </div>
+            </div>
+        </nav>
+        
+    <h2 class="title">Listing: Listing with description and no image</h2>
+    <hr>
+    
+    <form action="/list/4" class="listing-form" method="POST">
+    
+        <input type="hidden" name="csrfmiddlewaretoken" value="c6LsSUBPHEngc8eOkHJRFb6kETnrCFopX9r9OeFHgW1Qcr20z2tP6gsrQcvgzxW5">
+        
+                        <img src="gallery/defaultpic.png" class="listing-image" alt="">
+                            
+        
+        <p class="listing-price">Price: $100.00</p>
+        <p class="listing-description">This is listing with description and no image to show how it look</p>
+        <div class="listing-body">
+            <p class="listing-text">2 bid(s) so far. Your bid is the current bid.</p>
+            <input type="number" placeholder="Enter your bid..." class="listing-input" min="200" name="bet" id="" required>
+            <input class="listing-submit" type="submit" value="Place Bet">
+            <p class="listing-details">Details: </p>
+            <ul class="listing-details-list">
+                <li class="details-item"><a href="#">Harry</a></li>
+                <li class="details-item">No category selected.</li>
+            </ul>
+        </div>
+    </form>
+    <h2 class="comment-title">Comments</h2>
+    <hr>
+    <div class="comment-section">
+        <input type="text" placeholder="Comment as Hermione..." class="comment-input" name="" id="">
+        <p class="comment-message">No comments...</p>
+    </div>
+
+    </body>
+    <script src="scripts/scripts.js"></script>
+</html>

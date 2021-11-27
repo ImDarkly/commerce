@@ -142,11 +142,10 @@ hr{
     flex-direction: column;
     background-color: var(--white-90);
     width: 280px;
-    height: 504px;
     margin: 32px;
     border-radius: 12px;
 }
-.card-img{
+.card-img img{
     width: 216px;
     height: 216px;
     margin: 32px 32px 16px 32px;
@@ -163,6 +162,7 @@ hr{
     text-align: center;
     flex-direction: column;
     justify-content: flex-end;
+    margin: 32px 16px 0 16px;
 }
 .card-body p{
     margin: 4px 0 0 0;
@@ -178,37 +178,50 @@ hr{
 .card-date{
     color: var(--white-50);
 }
-.card-button, .auction-submit{
+.card-button, .listing-submit, .create-submit{
     background-color: var(--blue);
     color: var(--white);
     font-size: 16px;
+    border: none;
+    outline: none;
     text-decoration: none;
     padding: 12px 0px;
     margin: 0 16px 32px 16px;
     margin-top: auto;
-    border-radius: 12px;
+    border-radius: 16px;
     cursor: pointer;   
 }
-.card-button:active, .auction-submit:active{
+.create-submit{
+    margin: 16px;
+}
+.card-button:active, .listing-submit:active, .create-submit:active{
     background-color: var(--light-blue);
     -webkit-tap-highlight-color: transparent;
 }
-.auction-form{
+.card-description{
+    overflow-wrap: break-word;
+}
+.listing-form{
     display: flex;
     flex-direction: column;
 }
-.auction-image{ 
+.listing-image{ 
     width: 196px;
     height: 196px;
     margin: 32px auto 16px auto;
     border-radius: 12px;
 }
-.auction-description, .auction-price{
+.listing-description, .listing-price{
     font-size: 20px;
     align-items: left;
-    margin: 8px auto;
+    margin: 8px 32px;
+    overflow-wrap: break-word;
 }
-.auction-body, .comment-section{
+.listing-price{
+    text-align: center;
+    font-weight: bold;
+}
+.listing-body, .comment-section{
     position: relative;
     display: flex;
     flex-direction: column;
@@ -217,28 +230,24 @@ hr{
     border-radius: 12px;
     max-width: 396px;
 }
-.auction-text{
+.listing-text{
     font-size: 20px;
     margin: 16px 16px 8px 16px;
 }
-.auction-input{
+.listing-input{
     font-size: 16px;
     margin: 8px 16px 16px 16px;
     background-color: var(--white);
     border: none;
-    border-radius: 12px;
-    padding: 8px 24px;
+    border-radius: 16px;
+    padding: 12px 24px;
     outline: none;
 }
-.auction-submit{
-    border: none;
-    outline: none;
-}
-.auction-details{
+.listing-details{
     margin: 0 16px;
     font-size: 20px;
 }
-.auction-details-list{
+.listing-details-list{
     margin-top: 8px;
 }
 .details-item a{
@@ -250,17 +259,45 @@ hr{
     margin: 8px 32px;
     font-weight: normal;
 }
-.comment-input{
+.comment-input, .create-input input{
     font-size: 16px;
     margin: 16px;
     background-color: var(--white);
     border: none;
-    border-radius: 12px;
-    padding: 8px 24px;
+    border-radius: 16px;
+    padding: 12px 16px;
     outline: none;
 }
 .comment-message{
     margin: 16px;
+}
+.create-form{
+    display: flex;
+    margin: 32px 16px 0 16px;
+    flex-direction: column;
+    background-color: var(--white-90);
+    border-radius: 12px;
+}
+.create-input input, .create-description{
+    width: calc(100% - 64px);
+}
+.create-description{
+    border: none;
+    font-family: Roboto, sans-serif;
+    word-wrap: break-word;
+    word-break: break-all;
+    font-size: 16px;
+    margin: 16px;
+    background-color: var(--white);
+    border: none;
+    border-radius: 16px;
+    padding: 12px 16px 128px 16px;
+    outline: none;
+    overflow: hidden;
+    resize: none;
+}
+.create-category input::-webkit-calendar-picker-indicator{
+    display: none;
 }
 @media screen and (min-width: 1200px) {
     .nav-burger{

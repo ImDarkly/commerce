@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Auctions</title>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="styles/styles.css" rel="stylesheet">
+    </head>
+    <body>
+        <nav id="nav">
+            <div class="navbar">
+                <h1>Auctions</h1>
+                <div class="nav-burger" id="nav-burger">
+                    <button onclick="OpenList()">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+                <ul class="nav">
+                    <hr>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Active Listings</a>
+                    </li>
+                    
+                        <li class="nav-item">
+                            <a class="nav-link" href="/">Categories</a>
+                        </li>
+        
+                        <li class="nav-item">
+                            <a class="nav-link" href="/">Watchlist</a>
+                        </li>
+        
+                        <li class="nav-item">
+                            <a class="nav-link" href="create.html">Create Listing</a>
+                        </li>
+        
+                        <li class="nav-item">
+                            <a class="nav-link" href="/">Log Out</a>
+                        </li>
+                    
+                    <hr>
+                </ul>
+                <div class="nav-message">
+                    
+                        Signed in as <strong>admin</strong>.
+                    
+                </div>
+            </div>
+        </nav>
+        
+
+    <h2 class="title">Create Listing</h2>
+    <hr>
+
+    <form action="lisitng.html" class="create-form" autocomplete="off" method="post">
+        <input type="hidden" name="csrfmiddlewaretoken" value="C7xz96eu4AEjTQ5OKEY7fh1HJpDx3mDpnadg5qimDSiTT9T0ZZI5GmnOVILm0eb5">
+        <div class="create-input">
+            <input class="form-control" autofocus type="text" name="title" maxlength="64" placeholder="Title" required>
+        </div>
+        <div class="create-input">
+            <input class="form-control" type="number" min="0" name="price" placeholder="Enter Minimal Price" required>
+        </div>
+        <div class="create-input">
+            <textarea class="form-control create-description" type="text" maxlength="128" name="description" placeholder="Enter Description"></textarea>
+        </div>
+        <div class="create-input">
+            <input class="form-control create-category" type="select" list="category" name="category" placeholder="Choose Category">
+        </div>
+        <div class="create-input">
+            <input class="form-control" type="url" name="image" placeholder="Add image url">
+        </div>
+        <input class="create-submit" type="submit" value="Create Listing">
+    </form>
+
+    <datalist id="category">
+        <option value="Edge">
+        <option value="Firefox">
+        <option value="Chrome">
+        <option value="Opera">
+        <option value="Safari">
+    </datalist>
+
+    </body>
+    <script src="scripts/scripts.js"></script>
+</html>
