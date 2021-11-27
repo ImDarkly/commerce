@@ -143,7 +143,7 @@ hr{
     display: flex;
     flex-direction: column;
     background-color: var(--white-95);
-    width: 280px;
+    width: 360px;
     margin: 32px;
     border-radius: 12px;
 }
