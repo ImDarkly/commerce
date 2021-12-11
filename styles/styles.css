@@ -7,6 +7,8 @@
     --white-70: #b2b2b2;
     --blue: #0A7FFF;
     --light-blue: #248DFF;
+    --red: #E52E2E;
+    --light-red: #FFE0E0;
 }
 body{
     padding: 0;
@@ -21,16 +23,18 @@ body{
     visibility: visible; 
     opacity: 1;
 }
-input{
+textarea, input{
     font-size: 16px;
-    margin: 16px 16px 8px 16px;
+    margin: 0 16px 16px 16px;
     background-color: var(--white);
     border-radius: 16px;
     padding: 12px 24px;
-    outline: none;
-    border: 2px solid var(--white-85);
+    border: none;
     width: calc(100% - 80px);
+    outline: 2px solid var(--white-85);
+    transition: all .2s ease;
 }
+
 input[type=submit]{
     background-color: var(--blue);
     color: var(--white);
@@ -44,6 +48,15 @@ input[type=submit]{
     border-radius: 16px;
     cursor: pointer; 
     width: calc(100% - 32px);
+    -webkit-tap-highlight-color: transparent;
+    transition: all .2s ease;
+}
+input[type=submit]:active{
+    transform: scale(1.03); 
+    background-color: var(--light-blue);
+}
+textarea:focus, input:focus{
+    transform: scale(1.03); 
 }
 form{
     position: relative;
@@ -53,6 +66,13 @@ form{
     margin: 8px 16px;
     border-radius: 12px;
     max-width: 396px;
+    padding: 32px 0 32px 0;
+}
+a{
+    color: var(--blue);
+    font-weight: bold;
+    text-decoration: none;
+    -webkit-tap-highlight-color: transparent;
 }
 h2{
     margin: 96px 32px 8px 32px;
@@ -68,7 +88,7 @@ nav{
     border-radius: 12px;
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
     transition: height 0.5s cubic-bezier(0.4, 0, 0, 1.02);
-    z-index: 2;
+    z-index: 4;
 }
 .nav-active{
     height: 416px;
@@ -155,22 +175,38 @@ nav{
     padding: 8px 24px;
     margin: 8px 0;
     border-radius: 12px;
+    transition: all .2s ease;
 }
 .navbar .nav-item:hover{
     background-color: var(--white-85);
 }
 .nav-message{
     position: relative;
-    text-align: center;
-    vertical-align: middle;
-    font-size: 16px;
-    margin: 8px auto;
+    font-size: 24px;
+    margin: 4px auto;
     max-width: 280px;
+    transition: all .2s ease;
+    padding: 16px 0;
+}
+.nav-message-active{
+    transition: .2s ease;
+}
+.nav-message p{
+    margin: 8px auto;
+}
+.nav-message img{
+    padding: 12px;
+    height: 24px;
+    border-radius: 12px;
+    -webkit-user-drag: none;
+}
+.nav-message-active:active, .navbar .nav-item:active{
+    transform: scale(0.9);
 }
 .nav-message a{
-    width: 24px;
-    margin-left: 8px;
-    position: absolute;
+    color: black;
+    display: flex;
+    flex-direction: row;
 }
 .nav-bg{
     position: fixed;
@@ -182,7 +218,7 @@ nav{
     padding: 0;
     margin: 0;
     background: rgba(0, 0, 0, 0.6);
-    z-index: 2;
+    z-index: 3;
     transition: all 0.4s ease-in-out;
 }
 hr{
@@ -238,7 +274,7 @@ hr{
 .card-date{
     color: var(--white-50);
 }
-.card-button, .listing-submit, .create-submit{
+.card-button{
     background-color: var(--blue);
     color: var(--white);
     font-size: 16px;
@@ -249,7 +285,13 @@ hr{
     margin: 0 16px 32px 16px;
     margin-top: auto;
     border-radius: 16px;
+    font-weight: normal;
     cursor: pointer;   
+    
+}
+.card-button:active{
+    transform: scale(1.03); 
+    background-color: var(--light-blue);
 }
 .create-submit{
     margin: 16px;
@@ -295,13 +337,7 @@ hr{
     margin: 16px 16px 8px 16px;
 }
 .listing-input{
-    font-size: 16px;
     margin: 8px 16px 16px 16px;
-    background-color: var(--white);
-    border-radius: 16px;
-    padding: 12px 24px;
-    outline: none;
-    border: 2px solid var(--white-85);
 }
 .listing-details{
     margin: 0 16px;
@@ -319,44 +355,70 @@ hr{
     margin: 8px 32px;
     font-weight: normal;
 }
-.comment-input, .create-input input{
-    font-size: 16px;
-    margin: 16px;
-    background-color: var(--white);
-    border: 2px solid var(--white-85);
-    border-radius: 16px;
-    padding: 12px 16px;
-    outline: none;
-}
 .comment-message{
+    margin: 16px;
+}
+.comment-input{
     margin: 16px;
 }
 .create-form{
     display: flex;
-    margin: 32px 16px 0 16px;
     flex-direction: column;
     background-color: var(--white-95);
     border-radius: 12px;
 }
-.create-input input, .create-description{
+.create-description{
     width: calc(100% - 64px);
 }
 .create-description{
     font-family: Roboto, sans-serif;
     word-wrap: break-word;
     word-break: break-all;
-    font-size: 16px;
     margin: 16px;
-    background-color: var(--white);
-    border: 2px solid var(--white-85);
-    border-radius: 16px;
     padding: 12px 16px 128px 16px;
-    outline: none;
     overflow: auto;
     resize: none;
 }
 .create-category input::-webkit-calendar-picker-indicator{
     display: none;
+}
+.form-link{
+    margin: auto;
+}
+.form-message{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 16px;
+    z-index: 2;
+    background-color: var(--light-red);
+    width: calc(100% - 32px);
+    height: 64px;
+    bottom: 0;
+    margin: 16px;
+    padding: 0;
+    text-align: center;
+    align-items: center;
+    vertical-align: middle;
+    animation: slide-up .4s cubic-bezier(0.18, 0.89, 0.32, 1.28);
+    border-radius: 12px;
+    color: var(--red);
+}
+
+@keyframes slide-up {
+    0% {
+        opacity: 0;
+        transform: translateY(82px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.login-message:after {
+    content: ' ';
+    
 }
 @media screen and (min-width: 1200px) {
     .nav-burger{
@@ -393,5 +455,23 @@ hr{
         margin: 18px 0;
         min-width: 280px;
     }
-    
+    input[type=submit]:hover{
+        background-color: var(--light-blue); 
+    }
+    .card-button:hover{
+        background-color: var(--light-blue);
+    }
+    .nav-message{
+        margin: auto 24px;
+        padding: 0;
+    }    
+    .nav-message p{
+        margin: auto;
+    }
+    .nav-message-active img:hover{
+        background-color: var(--white-85);
+    }
+    form{
+        margin: 24px auto;
+    }
 }

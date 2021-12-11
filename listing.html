@@ -1,3 +1,6 @@
+
+
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -5,7 +8,7 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href="styles/styles.css" rel="stylesheet">
+        <link href="/static/auctions/styles.css" rel="stylesheet">
     </head>
     <body>
         <div class="nav-bg hide" id="nav-blur"></div>
@@ -22,30 +25,21 @@
                 <ul class="nav">
                     <hr>
                     <li class="nav-item">
-                        <a class="nav-link" href="index.html">Active Listings</a>
+                        <a class="nav-link" href="/">Active Listings</a>
                     </li>
                     
                         <li class="nav-item">
-                            <a class="nav-link" href="/">Categories</a>
+                            <a class="nav-link" href="/login">Log In</a>
                         </li>
-        
                         <li class="nav-item">
-                            <a class="nav-link" href="/">Watchlist</a>
-                        </li>
-        
-                        <li class="nav-item">
-                            <a class="nav-link" href="create.html">Create Listing</a>
-                        </li>
-        
-                        <li class="nav-item">
-                            <a class="nav-link" href="/">Log Out</a>
+                            <a class="nav-link" href="/register">Register</a>
                         </li>
                     
                     <hr>
                 </ul>
                 <div class="nav-message">
                     
-                        Signed in as <strong>admin</strong>.
+                        Not signed in.
                     
                 </div>
             </div>
@@ -54,11 +48,11 @@
     <h2 class="title">Listing: Listing with description and no image</h2>
     <hr>
     
-    <form action="/list/4" class="listing-form" method="POST">
+    <form action="/login" class="listing-form">
     
-        <input type="hidden" name="csrfmiddlewaretoken" value="c6LsSUBPHEngc8eOkHJRFb6kETnrCFopX9r9OeFHgW1Qcr20z2tP6gsrQcvgzxW5">
+        <input type="hidden" name="csrfmiddlewaretoken" value="IP6dhKOaW5pGoSXhBdV0qeMURUuqw3SZ1YqXf1LElvyYdv5cFvIxI0p5g5g07OXl">
         
-                        <img src="gallery/defaultpic.png" class="listing-image" alt="">
+                        <img src="/static/auctions/defaultpic.png" class="listing-image" alt="">
                             
         
         <p class="listing-price">Price: $100.00</p>
@@ -82,5 +76,5 @@
     </div>
 
     </body>
-    <script src="scripts/scripts.js"></script>
+    <script src="/static/auctions/scripts.js"></script>
 </html>

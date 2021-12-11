@@ -1,3 +1,6 @@
+
+
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -5,7 +8,7 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href="styles/styles.css" rel="stylesheet">
+        <link href="/static/auctions/styles.css" rel="stylesheet">
     </head>
     <body>
         <div class="nav-bg hide" id="nav-blur"></div>
@@ -22,7 +25,7 @@
                 <ul class="nav">
                     <hr>
                     <li class="nav-item">
-                        <a class="nav-link" href="index.html">Active Listings</a>
+                        <a class="nav-link" href="/">Active Listings</a>
                     </li>
                     
                         <li class="nav-item">
@@ -34,18 +37,14 @@
                         </li>
         
                         <li class="nav-item">
-                            <a class="nav-link" href="create.html">Create Listing</a>
-                        </li>
-        
-                        <li class="nav-item">
-                            <a class="nav-link" href="/">Log Out</a>
+                            <a class="nav-link" href="/create">Create Listing</a>
                         </li>
                     
                     <hr>
                 </ul>
                 <div class="nav-message">
                     
-                        Signed in as <strong>admin</strong>.
+                        <div class="nav-message-active"><a href="/logout"><p>Signed in as <strong>admin</strong>. </p><img src="/static/auctions/SignOut.svg" alt=""></a></div>
                     
                 </div>
             </div>
@@ -55,8 +54,8 @@
     <h2 class="title">Create Listing</h2>
     <hr>
 
-    <form action="lisitng.html" class="create-form" autocomplete="off" method="post">
-        <input type="hidden" name="csrfmiddlewaretoken" value="C7xz96eu4AEjTQ5OKEY7fh1HJpDx3mDpnadg5qimDSiTT9T0ZZI5GmnOVILm0eb5">
+    <form action="/create" class="create-form" autocomplete="off" method="post">
+        <input type="hidden" name="csrfmiddlewaretoken" value="mpBsQBQsLYxfxCYvglbxZtEZiKZx8BUPbdF5eDpMHCODUAO0Sp9kyc0gXYbKeDY5">
         <div class="create-input">
             <input class="form-control" autofocus type="text" name="title" maxlength="64" placeholder="Title" required>
         </div>
@@ -84,5 +83,5 @@
     </datalist>
 
     </body>
-    <script src="scripts/scripts.js"></script>
+    <script src="/static/auctions/scripts.js"></script>
 </html>
