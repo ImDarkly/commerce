@@ -5,7 +5,7 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href="/static/auctions/styles.css" rel="stylesheet">
+        <link href="styles/styles.css" rel="stylesheet">
     </head>
     <body>
         <div class="nav-bg hide" id="nav-blur"></div>
@@ -26,17 +26,22 @@
                     </li>
                     
                         <li class="nav-item">
-                            <a class="nav-link" href="/login">Log In</a>
+                            <a class="nav-link" href="/">Categories</a>
                         </li>
+        
                         <li class="nav-item">
-                            <a class="nav-link" href="/register">Register</a>
+                            <a class="nav-link" href="/">Watchlist</a>
+                        </li>
+        
+                        <li class="nav-item">
+                            <a class="nav-link" href="/create">Create Listing</a>
                         </li>
                     
                     <hr>
                 </ul>
                 <div class="nav-message">
                     
-                        Not signed in.
+                        <div class="nav-message-active"><a href="/logout"><p>Signed in as <strong>admin</strong>. </p><img src="/static/auctions/SignOut.svg" alt=""></a></div>
                     
                 </div>
             </div>
@@ -109,5 +114,5 @@
         </div>
 
     </body>
-    <script src="/static/auctions/scripts.js"></script>
+    <script src="scripts/scripts.js"></script>
 </html>
