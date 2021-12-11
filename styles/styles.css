@@ -286,7 +286,8 @@ hr{
     margin-top: auto;
     border-radius: 16px;
     font-weight: normal;
-    cursor: pointer;   
+    cursor: pointer;  
+    transition: transform .2s ease; 
     
 }
 .card-button:active{
