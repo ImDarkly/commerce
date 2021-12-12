@@ -290,7 +290,7 @@ hr{
     transition: transform .2s ease;
 }
 .card-button:active{
-    transform: scale(0.97); 
+    transform: scale(0.9); 
     background-color: var(--light-blue);
 }
 .create-submit{
