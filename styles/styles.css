@@ -52,7 +52,7 @@ input[type=submit]{
     transition: all .2s ease;
 }
 input[type=submit]:active{
-    transform: scale(1.03); 
+    transform: scale(0.97); 
     background-color: var(--light-blue);
 }
 textarea:focus, input:focus{
@@ -286,12 +286,11 @@ hr{
     margin-top: auto;
     border-radius: 16px;
     font-weight: normal;
-    cursor: pointer;  
-    transition: transform .2s ease; 
-    
+    cursor: pointer;   
+    transition: transform .2s ease;
 }
 .card-button:active{
-    transform: scale(1.03); 
+    transform: scale(0.97); 
     background-color: var(--light-blue);
 }
 .create-submit{
@@ -474,5 +473,14 @@ hr{
     }
     form{
         margin: 24px auto;
+    }
+    a:hover{
+        text-decoration: underline;
+    }
+    .card-button:hover{
+        text-decoration: none;
+    }
+    .nav-bg{
+        display: none;
     }
 }
