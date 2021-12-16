@@ -9,11 +9,15 @@
     --light-blue: #248DFF;
     --red: #E52E2E;
     --light-red: #FFE0E0;
+    --light-green: #23A617;
 }
 body{
     padding: 0;
     margin: 0;
     font-family: Roboto, sans-serif;
+    -webkit-user-select: none;
+    user-select: none;
+    -webkit-user-drag: none;
 }
 .hide{
     visibility: hidden !important; 
@@ -57,6 +61,10 @@ input[type=submit]:active{
 }
 textarea:focus, input:focus{
     transform: scale(1.03); 
+    outline-color: var(--light-blue);
+}
+input[type="email"]:invalid:not(:focus):not(:placeholder-shown){
+    outline-color: var(--red);
 }
 form{
     position: relative;
@@ -73,6 +81,7 @@ a{
     font-weight: bold;
     text-decoration: none;
     -webkit-tap-highlight-color: transparent;
+    outline-color: var(--light-blue);
 }
 h2{
     margin: 96px 32px 8px 32px;
@@ -100,7 +109,6 @@ nav{
 }
 .navbar h1{
     position: relative;
-    float: left;
     margin: 13px 24px;
     padding: 0;
     font-weight: normal;
@@ -184,7 +192,7 @@ nav{
     position: relative;
     font-size: 24px;
     margin: 4px auto;
-    max-width: 280px;
+    width: 280px;
     transition: all .2s ease;
     padding: 16px 0;
 }
@@ -259,6 +267,8 @@ hr{
     flex-direction: column;
     justify-content: flex-end;
     margin: 32px 16px 0 16px;
+    -webkit-user-select: text;
+    user-select: text;
 }
 .card-body p{
     margin: 4px 0 0 0;
@@ -288,6 +298,8 @@ hr{
     font-weight: normal;
     cursor: pointer;   
     transition: transform .2s ease;
+    -webkit-user-select: none;
+    user-select: none;
 }
 .card-button:active{
     transform: scale(0.9); 
@@ -306,6 +318,8 @@ hr{
 .listing-form{
     display: flex;
     flex-direction: column;
+    -webkit-user-select: text;
+    user-select: text;
 }
 .listing-image{ 
     width: 196px;
@@ -420,13 +434,15 @@ hr{
     content: ' ';
     
 }
-@media screen and (min-width: 1200px) {
+.nav-logo{}
+@media screen and (min-width: 1100px) {
     .nav-burger{
         display: none;
     }
     .navbar{
         display: flex;
         flex-direction: row;
+        justify-content: space-between;
     }
     .nav{
         height: 56px;
@@ -435,11 +451,12 @@ hr{
         height: 56px;
     }
     .navbar ul{
-        margin: 18px auto;
-        display: inline;
+        margin: 0;
+        display: flex;
+        flex-direction: row;
+        justify-content:center;
         position: relative;
         float: center;
-        width: 100%;
     }
     .nav hr{
         display: none;
@@ -448,7 +465,7 @@ hr{
         font-size: 16px;
         padding: 8px 24px;
         display: inline;
-        margin: 24px 2px;
+        margin: auto;
     }
     .nav-message{
         float: right;
@@ -465,6 +482,9 @@ hr{
         margin: auto 24px;
         padding: 0;
     }    
+    .nav-message a:hover{
+        text-decoration: none;
+    }
     .nav-message p{
         margin: auto;
     }
