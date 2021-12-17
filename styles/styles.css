@@ -109,6 +109,7 @@ nav{
 }
 .navbar h1{
     position: relative;
+    float: left;
     margin: 13px 24px;
     padding: 0;
     font-weight: normal;
