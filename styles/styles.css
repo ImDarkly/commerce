@@ -131,7 +131,7 @@ nav{
     transition: transform 0.2s ease;
 }  
 .nav-burger button:active{
-    transform: scale(0.5s);
+    transform: scale(0.5);
 }
 .nav-burger span{
     top: 12px;
