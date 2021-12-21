@@ -128,9 +128,10 @@ nav{
     border: none;
     outline: none;
     background-color: transparent;
+    transition: transform 0.2s ease;
 }  
 .nav-burger button:active{
-    background-color: var(--white-85);
+    transform: scale(0.5s);
 }
 .nav-burger span{
     top: 12px;
