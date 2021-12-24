@@ -19,7 +19,8 @@
     }
 }
 ::selection{
-    color: var(--light-blue);
+    color: var(--white);
+    background-color: var(--light-blue);
 }
 body{
     padding: 0;
