@@ -12,9 +12,6 @@
     --light-green: #23A617;
 }
 @media (prefers-color-scheme: dark) {
-    body { 
-        background: black; 
-    }
 }
 @media (prefers-color-scheme: light) {
     body { 
