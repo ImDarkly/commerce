@@ -11,6 +11,11 @@
     --light-red: #FFE0E0;
     --light-green: #23A617;
 }
+@media (prefers-color-sheme: dark){
+    :root{
+        --white: #000000;
+    }
+}
 body{
     padding: 0;
     margin: 0;
