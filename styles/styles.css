@@ -21,6 +21,7 @@ body{
 }
 button{
     cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
 }
 .hide{
     visibility: hidden !important; 
