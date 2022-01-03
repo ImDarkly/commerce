@@ -19,6 +19,10 @@ body{
     user-select: none;
     -webkit-user-drag: none;
 }
+::selection{
+    color: var(--white);
+    background-color: var(--blue);
+}
 button{
     cursor: pointer;
     -webkit-tap-highlight-color: transparent;
